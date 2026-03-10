@@ -1,0 +1,173 @@
+
+:root{
+  --font: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Beige Color Palette */
+  --bg: #F5EFE6;
+  --surface: #FFFFFF;
+  --text: #3E2F26;
+  --muted: #8A7B6D;
+
+  --primary: #D6B88A;
+  --primary-2: #C5A372;
+
+  --border: rgba(62,47,38,0.1);
+
+  --radius: 20px;
+  --container: 1120px;
+}
+
+/* ===== Reset ===== */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ===== Images ===== */
+
+img{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+}
+
+/* ===== Container ===== */
+
+.container{
+  width:100%;
+  max-width:var(--container);
+  margin:auto;
+  padding:0 20px;
+}
+
+/* ===== Header ===== */
+
+.site-header{
+  position:sticky;
+  top:0;
+  background:#ffffffcc;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+.brand-mark{
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:white;
+  font-weight:800;
+}
+
+.brand-name{
+  font-weight:800;
+}
+
+/* ===== Navigation ===== */
+
+.nav-list{
+  display:flex;
+  gap:10px;
+  list-style:none;
+}
+
+.nav-link{
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:30px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.nav-link:hover{
+  background:rgba(214,184,138,0.25);
+  color:var(--primary);
+}
+
+.nav-link.is-active{
+  background:var(--primary);
+  color:white;
+}
+
+/* ===== Hero ===== */
+
+.hero{
+  padding:60px 0;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:2.4rem;
+  margin-bottom:15px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* ===== Buttons ===== */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 22px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-family:var(--font);
+}
+
+.btn-primary{
+  background:var(--primary);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--primary-2);
+
+}

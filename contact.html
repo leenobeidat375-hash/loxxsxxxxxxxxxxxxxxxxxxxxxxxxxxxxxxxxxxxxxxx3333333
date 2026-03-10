@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="تواصل مع loving home للحجز أو الاستفسار عن فندق الكلاب: نموذج تواصل متحقق، ووسائل اتصال إضافية." />
+  <title>loving home | التواصل والحجز</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="الانتقال إلى الصفحة الرئيسية">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span class="brand-text">
+          <span class="brand-name">loving home</span>
+          <span class="brand-tagline">فندق فاخر للكلاب في هونغ كونغ</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button"
+              aria-label="فتح قائمة التنقل"
+              aria-controls="primary-nav"
+              aria-expanded="false">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="التنقل الرئيسي">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li><a class="nav-link" href="facilities.html">المرافق والخدمات</a></li>
+          <li><a class="nav-link" href="packages.html">الحزم</a></li>
+          <li><a class="nav-link nav-cta is-active" href="contact.html" aria-current="page">تواصل للحجز</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="title">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="مسار التصفح">
+          <a href="index.html">الرئيسية</a>
+          <span aria-hidden="true">›</span>
+          <span>التواصل</span>
+        </nav>
+
+        <h1 id="title">تواصل لحجز  أو الاستفسار</h1>
+        <p class="lead">
+          املأ النموذج ببيانات كلبك وسنرد عليك بأقرب وقت لتأكيد التوفر واقتراح الحزمة المناسبة.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2 id="form-title">نموذج حجز الكلاب</h2>
+
+          <form id="contactForm" class="form" novalidate>
+            <div class="field">
+              <label for="ownerName">اسم المالك</label>
+              <input id="ownerName" name="ownerName" type="text" autocomplete="name" required
+                     aria-describedby="errOwnerName" />
+              <p id="errOwnerName" class="error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="dogName">اسم الكلب</label>
+              <input id="dogName" name="dogName" type="text" required
+                     aria-describedby="errDogName" />
+              <p id="errDogName" class="error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">البريد الإلكتروني</label>
+              <input id="email" name="email" type="email" autocomplete="email" required
+                     aria-describedby="errEmail" />
+              <p id="errEmail" class="error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">رقم الهاتف</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                     placeholder="+852XXXXXXXX"
+                     aria-describedby="phoneHelp errPhone" required />
+              <p id="phoneHelp" class="help">اكتب الرقم بصيغة واضحة. مثال: +85212345678</p>
+              <p id="errPhone" class="error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="dogSize">حجم الكلب</label>
+              <select id="dogSize" name="dogSize">
+                <option value="small">صغير</option>
+                <option value="medium" selected>متوسط</option>
+                <option value="large">كبير</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="plan">الحزمة المطلوبة</label>
+              <select id="plan" name="plan" aria-describedby="planHelp">
+                <option value="premium">Premium (فاخرة)</option>
+                <option value="classic" selected>Classic (قياسية)</option>
+                <option value="day">Day Care (رعاية نهارية)</option>
+                <option value="custom">مخصص (إقامة طويلة)</option>
+              </select>
+              <p id="planHelp" class="help">يمكنك اختيار "مخصص" إذا كانت المدة طويلة أو هناك متطلبات خاصة.</p>
+            </div>
+
+            <div class="field">
+              <label for="dates">المدة أو التواريخ</label>
+              <input id="dates" name="dates" type="text"
+                     placeholder="مثال: 3 ليالٍ / من 12 إلى 15 مارس"
+                     aria-describedby="errDates" required />
+              <p id="errDates" class="error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="message">تفاصيل إضافية عن كلبك</label>
+              <textarea id="message" name="message" rows="5"
+                        placeholder="العمر، السلالة، أي حساسية أو أدوية، ملاحظات سلوكية، الطعام المفضل..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">إرسال طلب الحجز</button>
+              <button class="btn btn-ghost" type="reset">مسح</button>
+            </div>
+
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-card" aria-labelledby="info-title">
+          <h2 id="info-title">وسائل تواصل أخرى</h2>
+          <ul class="contact-list">
+            <li><span class="k">البريد:</span> hello@pawtel.hk</li>
+            <li><span class="k">الهاتف:</span> +852 1234 5678</li>
+            <li><span class="k">الساعات:</span> يوميًا 08:00–20:00</li>
+            <li><span class="k">المنطقة:</span> Hong Kong</li>
+          </ul>
+
+          <div class="note">
+            <h3>ملاحظة خصوصية</h3>
+            <p class="muted">
+              نستخدم بيانات النموذج للرد على استفسارك فقط. لا يتم مشاركة بيانات كلبك مع طرف ثالث دون موافقتك.
+            </p>
+          </div>
+
+         <div class="map-wrap" aria-label="خريطة توضيحية (اختيارية)">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944652.6697189864!2d114.69987094031126!3d22.35176005707307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403e2eda332980f%3A0xf08ab3badbeac97c!2z2YfZiNmG2Log2YPZiNmG2Lo!5e0!3m2!1sar!2sjo!4v1772697479609!5m2!1sar!2sjo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <br>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">loving home</h3>
+        <p class="muted">تواصل سهل وواضح لحجز كلبك وتأكيد التوفر.</p>
+      </div>
+      <div>
+        <h4 class="footer-subtitle">روابط</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="facilities.html">المرافق والخدمات</a></li>
+          <li><a href="packages.html">الحزم</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-subtitle">معلومات</h4>
+        <ul class="footer-meta">
+          <li><span class="k">الساعات:</span> يوميًا 12:00–2:00</li>
+          <li><span class="k">البريد:</span> hello@.hk</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> loving home. جميع الحقوق محفوظة للكلاب الضيفة 🐾</small>
+    </div>
+  </footer>
+</body>
+</html>
